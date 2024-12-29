@@ -2,6 +2,10 @@
 
 A Python script implementing Lant Pritchett's four-part "smell tests" of development importance. Analyzes World Bank indicators against criteria for development relevance.
 
+See:
+- https://www.cgdev.org/blog/your-impact-evaluation-asking-questions-matter-four-part-smell-test
+- https://paulromer.net/urbanization-passes-the-pritchett-test/
+
 ## Requirements
 
 ```bash
