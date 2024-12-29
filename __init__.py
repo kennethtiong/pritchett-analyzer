@@ -1465,14 +1465,6 @@ class PritchettAnalyzer:
         self._print_test_explanations()
         self.print_detailed_results(all_results)
 
-        print(
-            "\n=== RANKING OF INDICATORS BY TESTS PASSED (including 0.5 for borderline) ==="
-        )
-        if ranking_df.empty:
-            print("(No valid data to rank.)")
-        else:
-            print(ranking_df.to_string(index=False))
-
 
 @click.group()
 def cli():
