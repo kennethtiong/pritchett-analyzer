@@ -6,7 +6,7 @@ A Python script implementing Lant Pritchett's four-part "smell tests" of develop
 
 ```bash
 # Install dependencies
-pip install pandas numpy requests click matplotlib
+uv pip install pandas numpy requests click matplotlib
 ```
 
 ## Quick Start
