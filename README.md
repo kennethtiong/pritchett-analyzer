@@ -1,24 +1,31 @@
 # Pritchett Analyzer
 
-A simple Python script implementing Lant Pritchett's four-part "smell tests" of development importance. Analyzes World Bank indicators against criteria for development relevance.
+A Python script implementing Lant Pritchett's four-part "smell tests" of development importance. Analyzes World Bank indicators against criteria for development relevance.
 
-## Install
+## Requirements
 
 ```bash
-uv pip install pritchett-analyzer
+# Install dependencies
+pip install pandas numpy requests click matplotlib
 ```
 
-## Usage
+## Quick Start
 
 ```bash
-# Basic usage
-pritchett-analyzer run-analysis
+# Clone the repository
+git clone https://github.com/kennethtiong/pritchett-analyzer.git
+cd pritchett-analyzer
+
+# Run the analysis
+python pritchett_analyzer.py run-analysis
 
 # With options
-pritchett-analyzer run-analysis --exclude-singapore --outdir ~/analysis --n-threads 8
+python pritchett_analyzer.py run-analysis --exclude-singapore --outdir ~/analysis --n-threads 8
 ```
 
-Or in Python:
+## Python API
+
+You can also use it in your Python code:
 
 ```python
 from pritchett_analyzer import PritchettAnalyzer
