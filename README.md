@@ -12,6 +12,7 @@ See:
 # Clone the repository
 git clone https://github.com/kennethtiong/pritchett-analyzer.git
 cd pritchett-analyzer
+```
 
 ```bash
 # Install dependencies
@@ -20,22 +21,12 @@ source .venv/bin/activate
 uv pip install pandas numpy requests click matplotlib
 ```
 
+```bash
 # Run the analysis
 python pritchett-analyzer.py run-analysis
 
 # With options
 python pritchett-analyzer.py run-analysis --exclude-singapore --outdir ~/analysis --n-threads 8
-```
-
-## Python API
-
-You can also use it in your Python code:
-
-```python
-from pritchett_analyzer import PritchettAnalyzer
-
-analyzer = PritchettAnalyzer()
-results = analyzer.run_comprehensive_analysis()
 ```
 
 ## License
