@@ -6,13 +6,6 @@ See:
 - https://www.cgdev.org/blog/your-impact-evaluation-asking-questions-matter-four-part-smell-test
 - https://paulromer.net/urbanization-passes-the-pritchett-test/
 
-## Requirements
-
-```bash
-# Install dependencies
-uv pip install pandas numpy requests click matplotlib
-```
-
 ## Quick Start
 
 ```bash
@@ -20,11 +13,18 @@ uv pip install pandas numpy requests click matplotlib
 git clone https://github.com/kennethtiong/pritchett-analyzer.git
 cd pritchett-analyzer
 
+```bash
+# Install dependencies
+uv venv
+source .venv/bin/activate
+uv pip install pandas numpy requests click matplotlib
+```
+
 # Run the analysis
-python pritchett_analyzer.py run-analysis
+python pritchett-analyzer.py run-analysis
 
 # With options
-python pritchett_analyzer.py run-analysis --exclude-singapore --outdir ~/analysis --n-threads 8
+python pritchett-analyzer.py run-analysis --exclude-singapore --outdir ~/analysis --n-threads 8
 ```
 
 ## Python API

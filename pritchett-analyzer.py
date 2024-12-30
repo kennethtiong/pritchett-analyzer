@@ -34,7 +34,7 @@ class PritchettAnalyzer:
     ):
         self.base_url = "https://api.worldbank.org/v2"
 
-        self.outdir = outdir
+        self.outdir = os.path.expanduser(outdir)
         if not os.path.exists(self.outdir):
             os.makedirs(self.outdir, exist_ok=True)
 
@@ -1503,6 +1503,7 @@ def run_analysis(exclude_singapore, outdir, n_threads):
     Run the Pritchett analysis, saving results to the specified OUTDIR.
     Uses n-threads to fetch data in parallel.
     """
+    outdir = os.path.expanduser(outdir)
     analyzer = PritchettAnalyzer(exclude_singapore=exclude_singapore, outdir=outdir)
     analyzer.main_run(n_threads=n_threads)
 
